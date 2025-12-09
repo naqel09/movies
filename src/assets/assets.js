@@ -4,6 +4,8 @@ import googlePlay from './googlePlay.svg'
 import appStore from './appStore.svg'
 import screenImage from './screenImage.svg'
 import profile from './profile.png'
+import video from './IronManTrailer.mp4'
+import video1 from './kny_infiniteCastle.mp4'
 
 export const assets = {
     logo,
@@ -16,12 +18,12 @@ export const assets = {
 
 export const dummyTrailers = [
     {
-        image: "https://img.youtube.com/vi/WpW36ldAqnM/maxresdefault.jpg",
-        videoUrl: 'https://www.youtube.com/watch?v=WpW36ldAqnM'
+        image: "https://m.media-amazon.com/images/S/pv-target-images/171a0d57ad98c986ce3254464ede6dd3421e312cb009ebef620915ebbbb76fc1.jpg",
+        videoUrl: video
     },
     {
-        image: "https://img.youtube.com/vi/-sAOWhvheK8/maxresdefault.jpg",
-        videoUrl: 'https://www.youtube.com/watch?v=-sAOWhvheK8'
+        image: "https://images.justwatch.com/backdrop/333384494/s640/demon-slayer-kimetsu-no-yaiba-the-movie-infinity-castle",
+        videoUrl: video1
     },
     {
         image: "https://img.youtube.com/vi/1pHDWnXmK7Y/maxresdefault.jpg",
