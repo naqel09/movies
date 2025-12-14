@@ -6,22 +6,33 @@ import MovieDetails from './pages/MovieDetails'
 import SeatLayout from './pages/SeatLayout'
 import MyBookings from './pages/MyBookings'
 import Favorite from './pages/Favorite'
-import {Toaster} from 'react-hot-toast'
+import { Toaster } from 'react-hot-toast'
 import Footer from './components/Footer'
 import Movies from './pages/Movies'
+import Dashboard from './pages/admin/Dashboard'
+import Layout from './pages/admin/Layout'
+import AddShows from './pages/admin/AddShows'
+import ListShows from './pages/admin/ListShows'
+import ListBookigs from './pages/admin/ListBookigs'
 const App = () => {
   const isAdminRoute = useLocation().pathname.startsWith('/admin')
   return (
     <>
-      <Toaster/>
+      <Toaster />
       {!isAdminRoute && <Navbar />}
       <Routes>
-        <Route path='/' element={<Home/>} />
-        <Route path='/movies' element={<Movies/>} />
-        <Route path='/movies/:id' element={<MovieDetails/>} />
-        <Route path='/movies/:id/:date' element={<SeatLayout/>} />
-        <Route path='/my-bookings' element={<MyBookings/>} />
-        <Route path='/favorite' element={<Favorite/>} />
+        <Route path='/' element={<Home />} />
+        <Route path='/movies' element={<Movies />} />
+        <Route path='/movies/:id' element={<MovieDetails />} />
+        <Route path='/movies/:id/:date' element={<SeatLayout />} />
+        <Route path='/my-bookings' element={<MyBookings />} />
+        <Route path='/favorite' element={<Favorite />} />
+        <Route path='/admin/*' element={<Layout />}>
+          <Route index element={<Dashboard />} />
+          <Route path='add-shows' element={<AddShows />} />
+          <Route path='list-shows' element={<ListShows />} />
+          <Route path='list-bookings' element={<ListBookigs />} />
+        </Route>
       </Routes>
       {!isAdminRoute && <Footer />}
     </>
